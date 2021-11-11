@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/container';
+import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar'
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
