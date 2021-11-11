@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-// import Container from 'react-bootstrap/container';
+import Container from 'react-bootstrap/container';
 import Navbar from 'react-bootstrap/Navbar'
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -16,7 +16,7 @@ export default function navbar() {
         <div>
           <Navbar bg="light" variant="light" style={{justifyContent:'space-between'}}
           >
-              {/* <Container> */}
+              <Container>
                 <Navbar.Brand href="#home">GeoActivist</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -27,7 +27,7 @@ export default function navbar() {
                     <Nav.Link href="/sign">Sign In</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
-              {/* </Container> */}
+              </Container>
             </Navbar>
         </div>
     )
