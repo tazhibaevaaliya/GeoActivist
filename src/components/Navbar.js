@@ -16,7 +16,7 @@ export default function navbar() {
         <div>
           <Navbar bg="light" variant="light" style={{justifyContent:'space-between'}}
           >
-              <Container>
+              {/* <Container> */}
                 <Navbar.Brand href="#home">GeoActivist</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -27,7 +27,7 @@ export default function navbar() {
                     <Nav.Link href="/sign">Sign In</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
-              </Container>
+              {/* </Container> */}
             </Navbar>
         </div>
     )
