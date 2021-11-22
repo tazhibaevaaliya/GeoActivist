@@ -1,7 +1,7 @@
 import React from 'react';
 import Typical from 'react-typical';
 import './homePage.css';
-import Navbar from './Navbar';
+import Navbar from './navigation';
 import image from './Assets/activism.jpeg';
 import type_of_activism_image1 from './Assets/coffee.jpeg'
 import type_of_activism_image2 from './Assets/lights.jpeg'
