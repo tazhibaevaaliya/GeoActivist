@@ -1,7 +1,7 @@
 
 import Searchbar from './Searchbar';
 
-import Navbar from './Navbar';
+import Navbar from './navigation';
 
 import React, {Component, useState,useRef,useEffect} from 'react';
 import "bootstrap/dist/css/bootstrap.css";
