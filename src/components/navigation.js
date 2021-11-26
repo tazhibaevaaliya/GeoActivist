@@ -52,16 +52,16 @@ const Navigation=()=>{
                                 <Button variant="outlined" color="success">Gun violence </Button>
                                 <br/>
                                 <br/>
-                                <Button variant="outlined" color="success">Women's rights </Button>
+                                <Button variant="outlined" color="success">Womens rights </Button>
                                 <br/>
                                 <br/>
-                                <Button variant="outlined" color="success">Gun violence </Button>
+                                <Button variant="outlined" color="success">Human rights </Button>
                                 <br/>
                                 <br/>
-                                <Button variant="outlined" color="success">Gun violence </Button>
+                                <Button variant="outlined" color="success">Community Interaction </Button>
                                 <br/>
                                 <br/>
-                                <Button variant="outlined" color="success">Gun violence </Button>
+                                <Button variant="outlined" color="success"> Domestic Violence  </Button>
                                 <br/>
                                 <br/>
                                 </Card>
