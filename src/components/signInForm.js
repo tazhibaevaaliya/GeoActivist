@@ -1,10 +1,12 @@
 
 import React from 'react'
-import { Grid,Paper, Avatar, TextField, Button, Typography,Link } from '@material-ui/core'
+import { Grid,Paper, Avatar, avatarStyle, TextField, Button, Typography,Link } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-
+import PersonIcon from '@mui/icons-material/Person';
+import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
+import GoogleSignOn from './signOnBtn.js';
 
 const Login=()=>{
 
@@ -16,7 +18,7 @@ const Login=()=>{
         <Grid>
             <Paper elevation={10} style={paperStyle}> 
                 <Grid align='center'>
-                     <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
+                     <Avatar style={avatarStyle}><PersonIcon/></Avatar>
                     <h2>Sign In</h2>
                 </Grid>
                 <TextField label='Username' placeholder='Enter username' fullWidth required/>
@@ -30,7 +32,9 @@ const Login=()=>{
                     }
                     label="Remember me"
                  />
-                <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+                 <GoogleSignOn></GoogleSignOn>
+
+                 <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
                 <Typography>
                      <Link href="/" >
                         Forgot password?
