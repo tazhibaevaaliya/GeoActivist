@@ -240,17 +240,18 @@ function ChildModal() {
           <br/>
           
            <FormGroup>
-            Protests 
+              <SvgButton> <Checkbox defaultChecked /> Protests</SvgButton>
             <br/>
-             Social Media Awarness 
-            <br/>
-             Political Rallies 
+            <SvgButton> <Checkbox defaultChecked />   Social Media Awarness </SvgButton>
                         <br/>
-           Articles 
-                        <br/>
-           International matters
 
-   
+            <SvgButton> <Checkbox defaultChecked />  Political Rallies  </SvgButton>
+                        <br/>
+
+            <SvgButton> <Checkbox defaultChecked /> National articles </SvgButton>
+
+       
+
           </FormGroup>
          
           <ChildModal/>
@@ -290,7 +291,10 @@ export default function NestedModal() {
                     <Nav.Link href="/map">Map</Nav.Link>
                     <Nav.Link href="/about">About</Nav.Link>
  
-      <SvgButton onClick={handleOpen} alignItems='center'>Sign in</SvgButton>
+      <h2 align="right"> <SvgButton onClick={handleOpen} align='right'>Sign in</SvgButton></h2>
+      <br/>
+      <h2 align="right"> <SvgButton onClick={handleOpen} align='right'>Sign up</SvgButton></h2>
+
       <Modal
         open={open}
         onClose={handleClose}
@@ -300,7 +304,7 @@ export default function NestedModal() {
  
                 <Box sx={{ background: '#89CFF0', align: 'center' }}>
                      <h1 align="center"><PersonIcon align="center"/></h1> 
-                     <h2 align="center">Sign In</h2>
+                     <h2 align="center">Sign Up</h2>
                 <br/>
              <h5 align='center'>  Username   
               <br/>
@@ -310,6 +314,7 @@ export default function NestedModal() {
               <br/> 
               <CustomInput align="center" aria-label="Demo input" placeholder="Password*" /></h5>
               <br/>
+              <h2 align="center"><Button variant="primary">Sign Up</Button></h2>
               <GoogleSignOn/>
               <br/>
                <Typography>
