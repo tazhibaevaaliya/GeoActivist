@@ -1,0 +1,11 @@
+.MuiModal-root	{
+    color: blue, 
+
+}
+
+button,
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  align: right,
+}

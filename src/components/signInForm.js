@@ -1,69 +1,52 @@
-import * as React from 'react';
-// import Box from '@mui/material/Box';
-// import TextField from '@mui/material/TextField';
-import {Box,TextField} from '@material-ui/core';
-import './signInForm.css';
-import './signOnBtn.js';
-import GoogleSignOn from './signOnBtn.js';
-import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
-import Navbar from './Navbar';
 
-export default function SignForm(){
+import React from 'react'
+import { Grid,Paper, Avatar, avatarStyle, TextField, Button, Typography,Link } from '@material-ui/core'
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import PersonIcon from '@mui/icons-material/Person';
+import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
+import GoogleSignOn from './signOnBtn.js';
+
+const Login=()=>{
+
+    const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto"}
+    const avatarStyle={backgroundColor:'#1bbd7e'}
+    const btnstyle={margin:'8px 0'}
     return(
-        <div>
-            <Navbar></Navbar>
-            <Box
-        component="form"
-        sx={{
-            // '& .MuiTextField-root': { m: 1, width: '25ch' },
-            // borderColor: 'grey.500',
-            // borderWidth:1
-            width:'25%',
-            alignContent:'center',
-            justifyContent:'space-around',
-            margin: 'auto',
-            width:'40%',
-            marginTop:'40px'
-        }}
-        noValidate
-        autoComplete="off"
-        border={1}
-        // width={25}
-        // style="border-color:black"
-        >
-            <div style={{fontFamily:'merriweather', textAlign:'center'}}>
-                <h1>Sign In Form</h1>
-            </div>
-            <div className="inputFields">
-                <TextField
-                    required
-                    id='Username'
-                    label="User Name"
-                    style={{margin:'auto'}}
-                    >
-                </TextField>
-                <TextField
-                    required
-                    id='Password'
-                    label="Password"
-                    type="password"
-                    style={{marginBottom:'30px',marginLeft:'auto',marginRight:'auto'}}
-                    >
-                </TextField>
-            </div>
-            <div className="resettingPassword">
-                <a href="google.com" style={{fontFamily:'merriweather',fontWeight:'100'}}>Forgot Password?</a>
-            </div>
-            <div className="continueBtn">
-                <Button variant="contained">Continue</Button>
-            </div>
-            <Divider variant="middle" />
-            <div className="signInBtn">
-                <GoogleSignOn></GoogleSignOn>
-            </div>
-            </Box>
-        </div>
-        
-    );
+        <Grid>
+            <Paper elevation={10} style={paperStyle}> 
+                <Grid align='center'>
+                     <Avatar style={avatarStyle}><PersonIcon/></Avatar>
+                    <h2>Sign In</h2>
+                </Grid>
+                <TextField label='Username' placeholder='Enter username' fullWidth required/>
+                <TextField label='Password' placeholder='Enter password' type='password' fullWidth required/>
+                <FormControlLabel
+                    control={
+                    <Checkbox
+                        name="checkedB"
+                        color="primary"
+                    />
+                    }
+                    label="Remember me"
+                 />
+                 <GoogleSignOn></GoogleSignOn>
+
+                 <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+                <Typography>
+                     <Link href="/" >
+                        Forgot password?
+                </Link>
+                </Typography>
+                <Typography > Do you have an account?
+                     <Link to="/" >
+                        Sign Up 
+                </Link>
+                </Typography>
+            </Paper>
+        </Grid>
+    )
 }
+
+export default Login
