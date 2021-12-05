@@ -8,7 +8,9 @@ import type_of_activism_image2 from './Assets/lights.jpeg'
 import type_of_activism_image3 from './Assets/nature.jpeg'
 import { InputGroup, Button, FormControl, Image, Row, Container, Col } from 'react-bootstrap';
 import { MDBCol, MDBIcon } from "mdbreact";
-import {logo} from '../components/Assets/boston-dec-6.jpeg'
+import logo from './Assets/boston-dec-6.jpeg'
+import intfest from './Assets/intfest.jpeg'
+
 // import InputGroup from 'react-bootstrap/InputGroup';
 // import Button from 'react-bootstrap'
 
@@ -89,7 +91,10 @@ export default function HomePage(){
                         <center><i> Dec 6th </i></center>
                         </div>
                         <div>
-                        <Image src={type_of_activism_image2} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}} rounded />
+                        <Image src={intfest} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}} rounded />
+                        <br/>
+                        <center><h4>Winter Fest at Boynton Yards</h4></center>
+                        <center><i> Dec 11th </i></center>
                         </div>
                         <div>
                         <Image src={type_of_activism_image3} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', flex:'calc()'}} rounded />
