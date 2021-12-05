@@ -3,6 +3,7 @@ import Typical from 'react-typical';
 import './homePage.css';
 import Navbar from './navigation';
 import image from './Assets/activism.jpeg';
+import {  Link } from "@material-ui/core";
 import type_of_activism_image1 from './Assets/coffee.jpeg'
 import type_of_activism_image2 from './Assets/lights.jpeg'
 import type_of_activism_image3 from './Assets/nature.jpeg'
@@ -10,6 +11,10 @@ import { InputGroup, Button, FormControl, Image, Row, Container, Col } from 'rea
 import { MDBCol, MDBIcon } from "mdbreact";
 import logo from './Assets/boston-dec-6.jpeg'
 import intfest from './Assets/intfest.jpeg'
+import com from './Assets/com.jpg'
+import sju from './Assets/sju.jpeg'
+import kyle from './Assets/kyle.jpeg'
+import stop from './Assets/stop.jpeg'
 
 // import InputGroup from 'react-bootstrap/InputGroup';
 // import Button from 'react-bootstrap'
@@ -65,15 +70,24 @@ export default function HomePage(){
                 </div>
 
             <div className="main_images">
-                        <div>
-                        <Image src={type_of_activism_image1} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}}rounded />
-
+            <div>          
+                        
+                        <Image src={sju} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
+                        <br/>
+                        <center><h4><Link to="/About">Afghanistan Human Rights Protest</Link></h4></center>
+                        <center><i> Dec 9th </i></center>
                         </div>
                         <div>
-                        <Image src={type_of_activism_image2} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}} rounded />
+                        <Image src={kyle} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}} rounded />
+                        <br/>
+                        <center><h4><Link to="/About">Kyle Rittenhouse Protest</Link></h4></center>
+                        <center><i> Dec 21th </i></center>
                         </div>
                         <div>
-                        <Image src={type_of_activism_image3} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', flex:'calc()'}} rounded />
+                        <Image src={stop} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', flex:'calc()', align: 'center'}} rounded />
+                        <br />
+                        <center><h4><Link to="/About">Sexual Assualt Protests</Link></h4></center>
+                        <center><i> Dec 5th </i></center>
                         </div>
             </div>
 
@@ -85,19 +99,22 @@ export default function HomePage(){
 
             <div className="main_images">
                         <div>
-                        <Image src={logo} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}}rounded />
+                        <Image src={logo} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', align: 'center', marginLeft:'auto', marginRight:'auto'}}rounded />
                         <br/>
-                        <center><h4>Boston Rally to Free Assange</h4></center>
-                        <center><i> Dec 6th </i></center>
+                        <center><h4><Link to="/About">Boston Rally to Free Assange</Link></h4>
+                        <i> Dec 6th </i></center>
                         </div>
                         <div>
-                        <Image src={intfest} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}} rounded />
+                        <Image src={intfest} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}} rounded />
                         <br/>
-                        <center><h4>Winter Fest at Boynton Yards</h4></center>
-                        <center><i> Dec 11th </i></center>
+                        <center><h4><Link to="/About">Winter Fest at Boynton Yards</Link></h4> 
+                        <i> Dec 11th </i></center>
                         </div>
                         <div>
-                        <Image src={type_of_activism_image3} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', flex:'calc()'}} rounded />
+                        <Image src={com} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', flex:'calc()', align: 'center'}} rounded />
+                        <br />
+                        <center><h4><Link to="/About">Coming Together</Link></h4></center>
+                        <center><i> Dec 5th </i></center>
                         </div>
             </div>
             {/* <Image src="" fluid /> */}
