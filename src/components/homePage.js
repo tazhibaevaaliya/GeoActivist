@@ -8,6 +8,7 @@ import type_of_activism_image2 from './Assets/lights.jpeg'
 import type_of_activism_image3 from './Assets/nature.jpeg'
 import { InputGroup, Button, FormControl, Image, Row, Container, Col } from 'react-bootstrap';
 import { MDBCol, MDBIcon } from "mdbreact";
+import {logo} from '../components/Assets/boston-dec-6.jpeg'
 // import InputGroup from 'react-bootstrap/InputGroup';
 // import Button from 'react-bootstrap'
 
@@ -64,6 +65,7 @@ export default function HomePage(){
             <div className="main_images">
                         <div>
                         <Image src={type_of_activism_image1} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}}rounded />
+
                         </div>
                         <div>
                         <Image src={type_of_activism_image2} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}} rounded />
@@ -81,7 +83,10 @@ export default function HomePage(){
 
             <div className="main_images">
                         <div>
-                        <Image src={type_of_activism_image1} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}}rounded />
+                        <Image src={logo} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}}rounded />
+                        <br/>
+                        <center><h4>Boston Rally to Free Assange</h4></center>
+                        <center><i> Dec 6th </i></center>
                         </div>
                         <div>
                         <Image src={type_of_activism_image2} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto'}} rounded />
