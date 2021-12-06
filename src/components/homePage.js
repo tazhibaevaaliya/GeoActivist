@@ -74,7 +74,7 @@ export default function HomePage(){
                         </form>
                     </MDBCol> */}
                     <MDBCol md="6">
-                         <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
+                         <input className="form-control" type="text" placeholder="Type of Activism | Type of Social Issue | Date" aria-label="Type of " />
                     </MDBCol>
             </div>
 
