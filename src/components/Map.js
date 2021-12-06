@@ -1,12 +1,11 @@
 import React,{ useState } from 'react'
-import MapGL, {GeolocateControl, Marker,Layer} from 'react-map-gl'
+import MapGL, {GeolocateControl, Marker} from 'react-map-gl'
 //import config from '../config'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-import { BrowserRouter as Router } from 'react-router-dom';
 
 import './sideBar.js'
-import Sidebar from './sideBar'
+ 
 
 const TOKEN='pk.eyJ1IjoidHphbGl5YSIsImEiOiJja3VuMncxd3QzeHI3MnZtbmZyOTE0Z2RhIn0.wXgglO-cXtCIq-QJ17Jv-g';
 

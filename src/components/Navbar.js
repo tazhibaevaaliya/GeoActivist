@@ -23,7 +23,7 @@ export default function navbar() {
                   <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/map">Map</Nav.Link>
-                    <Nav.Link href="#link">About</Nav.Link>
+                    <Nav.Link href="/AboutPage">About</Nav.Link>
                     <Nav.Link href="/sign">Sign In</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
