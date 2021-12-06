@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React,{ useState, useEffect } from 'react'
 import MapGL, {GeolocateControl, Marker,Layer} from 'react-map-gl'
 //import config from '../config'
@@ -6,6 +7,17 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './sideBar.js'
 import getData from './getData';
 import Sidebar from './sideBar'
+=======
+import React,{ useState } from 'react'
+import MapGL, {GeolocateControl, Marker} from 'react-map-gl'
+//import config from '../config'
+import 'mapbox-gl/dist/mapbox-gl.css'
+
+
+import './sideBar.js'
+ 
+
+>>>>>>> 611ef46440f6a9baafbf69991e288a6f50feed0c
 const TOKEN='pk.eyJ1IjoidHphbGl5YSIsImEiOiJja3VuMncxd3QzeHI3MnZtbmZyOTE0Z2RhIn0.wXgglO-cXtCIq-QJ17Jv-g';
 const latitude = [];
 const longtitude = []; 

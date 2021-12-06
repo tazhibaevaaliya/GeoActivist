@@ -50,15 +50,11 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
-  Redirect
 } from "react-router-dom";
 
 import HomePage from './components/homePage';
 import MapPage from './components/mapPage';
-import SignPage from './components/signInForm';
-import signuppage from './components/signuppage';
-import About from './components/About';
+import AboutPage from './components/AboutPage';
 
 function App() {
 
@@ -100,7 +96,7 @@ function App() {
     <Router>
       <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route exact path="/about" component={About} />
+      <Route exact path="/AboutPage" component={AboutPage} />
       <Route exact path="/map" component={MapPage} />
 
        {/* <Route exact path="/si" */}

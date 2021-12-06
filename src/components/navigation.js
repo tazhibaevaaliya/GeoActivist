@@ -32,6 +32,7 @@ import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import PropTypes from 'prop-types';
 
+
 const ButtonRoot = React.forwardRef(function ButtonRoot(props, ref) {
   const { children, ...other } = props;
 
@@ -289,7 +290,7 @@ export default function NestedModal() {
                   <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/map">Map</Nav.Link>
-                    <Nav.Link href="/about">About</Nav.Link>
+                    <Nav.Link href="/AboutPage">About</Nav.Link>
  
       <h2 align="right"> <SvgButton onClick={handleOpen} align='right'>Sign in</SvgButton></h2>
       <br/>
