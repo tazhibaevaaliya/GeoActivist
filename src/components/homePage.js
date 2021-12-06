@@ -27,8 +27,7 @@ import Group128 from "./Assets/Group128.png";
 import Group131 from "./Assets/Group131.png";
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
-
-
+import Alert from '@mui/material/Alert';
  
 
 // import InputGroup from 'react-bootstrap/InputGroup';
@@ -76,6 +75,14 @@ export default function HomePage(){
                     <MDBCol md="6">
                          <input className="form-control" type="text" placeholder="Type of Activism | Type of Social Issue | Date" aria-label="Type of " />
                     </MDBCol>
+
+                    <br/>
+                    <br/> 
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                   <Alert sx={{width: "175px", marginLeft: "600px", height: "38px"}} >Join our act here</Alert>  
             </div>
 
             <div style={{display:'block'}}>
@@ -84,9 +91,8 @@ export default function HomePage(){
                     </h1>
                 </div>
            {/* <Image src={Group119} style={{display:'block', align: 'left', width:'30%', height:'auto', maxHeight:'450px', marginLeft:'left', marginRight:'auto'}} /> */}
-            <div className="main_images">
-            <Card align="center">
-            <Box sx={{ display: 'flex', width: '1000px', margin: '40px'}}>
+            <div align="left" sx={{marginLeft: "50px"}} className="main_images">
+             <Box sx={{ display: 'flex', width: '1000px', margin: '20px'}}>
 
             <div>   
           
@@ -111,7 +117,7 @@ export default function HomePage(){
                         <center><h4><Link to="/About">Healthcare</Link></h4></center>
                         </div>
                         </Box>
-                        </Card>    
+                    
             </div>
          
             
@@ -121,14 +127,23 @@ export default function HomePage(){
                         Types of Activism
                     </h1>
             </div>
+            <br/>
+            <br/>
 
-            <div align="center" className="main_images">
-                
+            <div align="left" sx={{marginLeft: "50px"}} className="main_images">
  
+            <Box sx={{ display: 'flex', width: '1000px', marginLeft: '140px'}}>
+
+          
                         <div>
-                        <Image src={Group126} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'left'}}rounded />
+                        <Image src={Group126} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
                         <center><h4 ><Link to="/About">Offline</Link></h4></center>
+                        </div>
+                        <div>
+                        <Image src={Group127} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
+                        <br/>
+                        <center><h4><Link to="/About">Letter Writing</Link></h4> </center>
                         </div>
                         <div>
                         <Image src={Group127} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
@@ -139,8 +154,10 @@ export default function HomePage(){
                         <Image src={Group128} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br />
                         <center><h4><Link to="/About">Protests</Link></h4></center>
- 
+                        
             </div>
+            </Box>   
+ 
          
             <div>
                 <br/>
