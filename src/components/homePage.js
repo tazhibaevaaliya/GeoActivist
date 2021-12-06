@@ -28,7 +28,6 @@ import Group131 from "./Assets/Group131.png";
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
- 
 
 // import InputGroup from 'react-bootstrap/InputGroup';
 // import Button from 'react-bootstrap'
@@ -99,22 +98,22 @@ export default function HomePage(){
                         
                         <Image src={Group123} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
-                        <center><h4><Link to="/About">Feminism Rights</Link></h4></center>
+                        <center><h4><Link to="/AboutPage">Feminism Rights</Link></h4></center>
                         </div>
                         <div>
                         <Image src={Group122} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
-                        <center><h4><Link to="/About">Environmental rights</Link></h4></center>
+                        <center><h4><Link to="/AboutPage">Environmental rights</Link></h4></center>
                         </div>
                         <div>
                         <Image src={Group3125} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br />
-                        <center><h4><Link to="/About">LGBTQ Protests</Link></h4></center>
+                        <center><h4><Link to="/AboutPage">LGBTQ Protests</Link></h4></center>
                         </div>
                         <div>
                         <Image src={Group2124} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br />
-                        <center><h4><Link to="/About">Healthcare</Link></h4></center>
+                        <center><h4><Link to='/AboutPage'>Healthcare</Link></h4></center>
                         </div>
                         </Box>
                     
@@ -138,22 +137,22 @@ export default function HomePage(){
                         <div>
                         <Image src={Group126} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
-                        <center><h4 ><Link to="/About">Offline</Link></h4></center>
+                        <center><h4 ><Link to="/AboutPage">Offline</Link></h4></center>
                         </div>
                         <div>
                         <Image src={Group127} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
-                        <center><h4><Link to="/About">Letter Writing</Link></h4> </center>
+                        <center><h4><Link to="/AboutPage">Letter Writing</Link></h4> </center>
                         </div>
                         <div>
                         <Image src={Group127} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
-                        <center><h4><Link to="/About">Letter Writing</Link></h4> </center>
+                        <center><h4><Link to="/AboutPage">Letter Writing</Link></h4> </center>
                         </div>
                         <div>
                         <Image src={Group128} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br />
-                        <center><h4><Link to="/About">Protests</Link></h4></center>
+                        <center><h4><Link to="/AboutPage">Protests</Link></h4></center>
                         
             </div>
             </Box>   
@@ -172,14 +171,13 @@ export default function HomePage(){
                 <br/>
                 <br/>
                 <br/>
-                <div>
+                 
                {/* <Card sx={{ display: 'flex' }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}> */}
                  <Image src={Group131} style={{align: 'left', display:'block', maxHeight:'1960px', maxWidth: '1530px', marginLeft:'-1050px', marginRight:'auto'}}rounded /> 
                  {/* </Box>
                  </Card> */}
-                 </div>
- 
+  
             </div>
 
             </div>
