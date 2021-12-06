@@ -1,0 +1,12 @@
+.css-1nxmd3h-MuiListItem-root{
+    flex-direction: column;
+}
+/* 
+.css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root{
+    width: 100px;
+} */
+
+.css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root{
+    position: relative;
+    width: 100%;
+}
