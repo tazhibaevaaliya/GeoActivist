@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React,{ useState, useEffect } from 'react'
+import React,{ useState, useEffect, Image, View } from 'react'
 import MapGL, {GeolocateControl, Marker,Layer} from 'react-map-gl'
 //import config from '../config'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -7,17 +6,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './sideBar.js'
 import getData from './getData';
 import Sidebar from './sideBar'
-=======
-import React,{ useState } from 'react'
-import MapGL, {GeolocateControl, Marker} from 'react-map-gl'
-//import config from '../config'
-import 'mapbox-gl/dist/mapbox-gl.css'
-
-
-import './sideBar.js'
- 
-
->>>>>>> 611ef46440f6a9baafbf69991e288a6f50feed0c
 const TOKEN='pk.eyJ1IjoidHphbGl5YSIsImEiOiJja3VuMncxd3QzeHI3MnZtbmZyOTE0Z2RhIn0.wXgglO-cXtCIq-QJ17Jv-g';
 const latitude = [];
 const longtitude = []; 
@@ -51,13 +39,27 @@ const Map = () => {
   },[])
 
   for(const i in data){
-    latitude.push(data[i].Latitude);
+    latitude.push(parseFloat(data[i].Latitude));
   }
   console.log(latitude);
   
   for(const i in data){
-    longtitude.push(data[i].Longtitude);
+    longtitude.push(parseFloat(data[i].Longtitude));
   }
+
+
+
+  // loadMapMarkers =()=>{
+  //    {data.map(item=>{
+  //   return(<Marker latitude = {item.Latitude} longtitude={item.Longtitude} offsetLeft={-20} offsetTop={-10}>
+  //     <img src={require('./Assets/mapbox-marker-icon.png').default}/>
+  //       </Marker>);
+  //   } )} 
+  // }
+
+  const markers = data.map(item=>{<Marker latitude = {parseFloat(item.Latitude)} longtitude={parseFloat(item.Longtitude)} offsetLeft={-20} offsetTop={-10}>
+      <img src={require('./Assets/mapbox-marker-icon.png').default}/>
+    </Marker>})
 
   const _onViewportChange = viewport => setViewPort({...viewport, transitionDuration: 10 })
 
@@ -68,7 +70,10 @@ const Map = () => {
     padding:"0"
   }
 
-  // console.log(data);
+  console.log(data);
+
+  //const {latitude, longtitude} = data.map(item=>{item.Latitude, item.Longtitude});
+  console.log(latitude);
 
   return (
 
@@ -86,18 +91,26 @@ const Map = () => {
           trackUserLocation={true}
          />
 
-        
+         {/* {data.map(item=>{return(<Marker latitude = {parseFloat(item.Latitude)} longtitude={parseFloat(item.Longtitude)} offsetLeft={-20} offsetTop={-10}>
+    <img src={require('./Assets/mapbox-marker-icon.png').default}/>
+      </Marker>)})} */}
 
-         {/* {data.map((item,index)=>{
-           return(<Marker latitude = {item[index].Latitude} longtitude={item[index].Longtitude} offsetLeft={-20} offsetTop={-10}>
-             <img src={require('./Assets/mapbox-marker-icon.png').default}/>
-           </Marker>);
-         } )} */}
+        {/* {data.map((element,index)=>
+                        <Marker key={index} coordinate={{
+                            latitude: parseInt(element.Latitude,10),
+                            longitude: parseInt(element.Longtitude,10),
+                        }}>
+                            <img src={require('./Assets/mapbox-marker-icon.png').default}/>
+                        </Marker>
+                    )} */}
 
-        <Marker latitude={42.3486} longitude={-71.1029} offsetLeft={-20} offsetTop={-10}>
+                    {markers}
+
+      
+
+        {/* <Marker latitude={42.3486} longitude={-71.1029} offsetLeft={-20} offsetTop={-10}>
         <img src={require('./Assets/mapbox-marker-icon.png').default}/>
-       {/* <div>Marker here</div> */}
-        </Marker>
+        </Marker> */}
 
 
        </MapGL>

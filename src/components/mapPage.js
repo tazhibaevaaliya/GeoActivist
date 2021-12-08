@@ -16,7 +16,7 @@ import Sidebar from './sideBar'
 import VirtualizedList from './VirtualizedList';
 import getData from './getData';
 import { FixedSizeList } from 'react-window';
-import Box from '@mui/material/Box';
+import Paper from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -37,6 +37,7 @@ export default function MapPage(){
     const [zoom, setZoom] = useState(15.48);
     const [data, setData] = useState([]);
     const list = [];
+    const [name, setName] = useState('');
 
     useEffect(()=>{
         async function getMyData(){
@@ -52,11 +53,33 @@ export default function MapPage(){
     }
     console.log(list);
 
-    // <ListGroup.Item as="li">{item}</ListGroup.Item>X
+    // const [search, setSearch] = useState("");
+    const [foundEvents, setFoundEvents] = useState(list);
 
-    const items = list.map(item =><ListItem disablePadding>
+    // const searchClicked = (content) => {
+    //     setSearch(content);
+    // }
+
+    const filter = (e) => {
+        const keyword = e.target.value;
+    
+        if (keyword !== '') {
+          const results = list.filter((item) => {
+            return item.toLowerCase().startsWith(keyword.toLowerCase());
+            // Use the toLowerCase() method to make it case-insensitive
+          });
+          setFoundEvents(results);
+        } else {
+          setFoundEvents(list);
+          // If the text field is empty, show all users
+        }
+    
+        setName(keyword);
+      };
+
+    const items = data.map(item =><ListItem disablePadding>
                                     <ListItemButton>
-                                    <ListItemText primary={item} />
+                                    <ListItemText primary={item.Name} secondary={item.Address}/>
                                     </ListItemButton>
                                         </ListItem> ); 
 
@@ -64,8 +87,23 @@ export default function MapPage(){
         <div className="App">
 
         <Navbar></Navbar>
+        
         <div className="SearchBar">
-            <Searchbar ></Searchbar>
+        
+        <input
+        type="search"
+        value={name}
+        onChange={filter}
+        className="input"
+        placeholder="Filter"
+        />
+            {/* <Searchbar 
+            type="search"
+            value={name}
+            onChange={filter}
+            className="input"
+            placeholder="Filter" 
+            ></Searchbar> */}
             <DropDown_typeOfActivism></DropDown_typeOfActivism>
             <DropDown_issueType></DropDown_issueType>
             <SliderPage></SliderPage>
@@ -79,17 +117,28 @@ export default function MapPage(){
                 {/* <ListGroup as="ol" numbered>
                     {items}
                 </ListGroup> */}
-                {/* <Box
-                sx={{ width: '100%', height: 400, maxWidth: 360, bgcolor: 'background.paper' }}> */}
-                     <List>
+
+                {foundEvents && foundEvents.length > 0 ? (
+                    foundEvents.map((item) => (
+                         <Paper style={{ width: '100%', overflow:'auto', bgcolor: 'background.paper', }}>
+                     <List style={{maxHeight:600, overflow:'auto'}}>
                         <ListItem disablePadding>
-                            {items}
+                                    <ListItemButton>
+                                    <ListItemText primary={item}/>
+                                    </ListItemButton>
+                        </ListItem>
+                         {/* <ListItem disablePadding> */}
+                            {/* {items} 
                             {/* <ListItemButton>
                             <ListItemText primary="Drafts" />
                             </ListItemButton> */}
-                        </ListItem>
+                        {/* </ListItem> */}
                     </List>
-                {/* </Box> */}
+                </Paper>
+                            ))
+                        ) : (
+                        <h3>No results found! Please try something else</h3>)}
+                
             </div>
             </Router>
             </div>
