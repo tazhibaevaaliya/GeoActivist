@@ -18,10 +18,17 @@ import getData from './getData';
 import { FixedSizeList } from 'react-window';
 import Paper from '@mui/material/Box';
 import List from '@mui/material/List';
+import Card from '@mui/material/Card';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import ListGroup from 'react-bootstrap/ListGroup'
+import ListGroup from 'react-bootstrap/ListGroup';
+import { Button, CardActionArea, CardActions } from '@mui/material';
+import { orange } from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
+
+
+
 import './mapPage.css';
 // import homePage from './components/homePage';
 
@@ -124,7 +131,14 @@ export default function MapPage(){
                      <List style={{maxHeight:600, overflow:'auto'}}>
                         <ListItem disablePadding>
                                     <ListItemButton>
-                                    <ListItemText primary={item}/>
+                                    <Card sx={{ height: "250px", width: "450px",  bgcolor: blue[100]}} variant="outlined">
+                                    <br/>
+                                    
+                                    <h5 sx={{ bgcolor: blue[100] }}><center>{item}</center></h5>
+                                    <CardActions>
+                                        <Button size="small" variant="contained" align="center" sx={{ align: 'center', bgcolor: orange[700]}}>RSVP</Button>
+                                    </CardActions>
+                                    </Card>
                                     </ListItemButton>
                         </ListItem>
                          {/* <ListItem disablePadding> */}
