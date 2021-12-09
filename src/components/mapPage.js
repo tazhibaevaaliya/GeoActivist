@@ -87,7 +87,8 @@ export default function MapPage(){
 
     const items = data.map(item =><ListItem disablePadding>
                                     <ListItemButton>
-                                    <ListItemText primary={item.Name} secondary={item.address} />
+                                    <ListItemText primary={item.Name}/>
+                         
                                     </ListItemButton>
                                         </ListItem> ); 
 
