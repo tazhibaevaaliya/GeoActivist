@@ -26,7 +26,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { orange } from '@mui/material/colors';
 import { blue } from '@mui/material/colors';
-
+import IconButton from '@mui/material/IconButton';
+import AlarmIcon from '@mui/icons-material/Alarm';
 
 
 import './mapPage.css';
@@ -131,12 +132,17 @@ export default function MapPage(){
                      <List style={{maxHeight:600, overflow:'auto'}}>
                         <ListItem disablePadding>
                                     <ListItemButton>
-                                    <Card sx={{ height: "250px", width: "450px",  bgcolor: blue[100]}} variant="outlined">
+                                    <Card sx={{ height: "150px", width: "410px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
                                     <br/>
                                     
                                     <h5 sx={{ bgcolor: blue[100] }}><center>{item}</center></h5>
                                     <CardActions>
-                                        <Button size="small" variant="contained" align="center" sx={{ align: 'center', bgcolor: orange[700]}}>RSVP</Button>
+                                        <br/>
+                                        <br/>
+                                
+                                       <Button size="small" variant="contained" align="center" sx={{ marginLeft: '290px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm">
+  <AlarmIcon />
+</IconButton> RSVP</Button>
                                     </CardActions>
                                     </Card>
                                     </ListItemButton>
