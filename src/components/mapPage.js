@@ -120,24 +120,31 @@ export default function MapPage(){
 
                 {foundEvents && foundEvents.length > 0 ? (
                     foundEvents.map((item) => (
-                         <Paper style={{ width: '100%', overflow:'auto', bgcolor: 'background.paper', }}>
-                     <List style={{maxHeight:600, overflow:'auto'}}>
-                        <ListItem disablePadding>
+                         <Paper style={{ width: '100%', overflow:'auto', bgcolor: 'background.paper' }}>
+                            <List style={{maxHeight:600, overflow:'auto'}}>
+                                <ListItem disablePadding>
                                     <ListItemButton>
                                     <ListItemText primary={item}/>
                                     </ListItemButton>
-                        </ListItem>
-                         {/* <ListItem disablePadding> */}
-                            {/* {items} 
-                            {/* <ListItemButton>
-                            <ListItemText primary="Drafts" />
-                            </ListItemButton> */}
-                        {/* </ListItem> */}
-                    </List>
-                </Paper>
-                            ))
-                        ) : (
-                        <h3>No results found! Please try something else</h3>)}
+                                </ListItem>
+                            </List>
+                        </Paper>
+                            ))):
+                    //     ) : (data.map(item=><Paper style={{ width: '100%', overflow:'auto', bgcolor: 'background.paper' }}>
+                    //     <List style={{maxHeight:600, overflow:'auto'}}>
+                    //         <ListItem disablePadding>
+                    //             <ListItemButton>
+                    //             <ListItemText primary={item.Name}/>
+                    //             </ListItemButton>
+                    //         </ListItem>
+                    //     </List>
+                    // </Paper>))
+
+                    <Paper>
+                        <List>
+                        {items}
+                        </List>
+                    </Paper>}
                 
             </div>
             </Router>
