@@ -9,6 +9,8 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Link} from 'react-router-dom';
+import logog from "./Assets/logog.png";
+import { InputGroup, FormControl, Image, Container, Col } from 'react-bootstrap';
 
 
 export default function navbar() {
@@ -17,7 +19,7 @@ export default function navbar() {
           <Navbar bg="light" variant="light" style={{justifyContent:'space-between'}}
           >
               <Container>
-                <Navbar.Brand href="#home">GeoActivist</Navbar.Brand>
+                <Navbar.Brand href="#home"> <Image src={logog} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded /> GeoActivist</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
