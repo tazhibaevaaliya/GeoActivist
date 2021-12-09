@@ -71,10 +71,11 @@ export default function HomePage(){
                             <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" />
                         </form>
                     </MDBCol> */}
+                    <Link to="/mapPage">
                     <MDBCol md="6">
                          <input className="form-control" type="text" placeholder="Type of Activism | Type of Social Issue | Date" aria-label="Type of " />
                     </MDBCol>
-
+                    </Link>
                     <br/>
                     <br/> 
                     <br/>

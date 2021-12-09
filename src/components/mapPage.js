@@ -18,10 +18,18 @@ import getData from './getData';
 import { FixedSizeList } from 'react-window';
 import Paper from '@mui/material/Box';
 import List from '@mui/material/List';
+import Card from '@mui/material/Card';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import ListGroup from 'react-bootstrap/ListGroup'
+import ListGroup from 'react-bootstrap/ListGroup';
+import { Button, CardActionArea, CardActions } from '@mui/material';
+import { orange } from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
+import IconButton from '@mui/material/IconButton';
+import AlarmIcon from '@mui/icons-material/Alarm';
+
+
 import './mapPage.css';
 // import homePage from './components/homePage';
 
@@ -79,7 +87,8 @@ export default function MapPage(){
 
     const items = data.map(item =><ListItem disablePadding>
                                     <ListItemButton>
-                                    <ListItemText primary={item.Name} secondary={item.Address}/>
+                                    <ListItemText primary={item.Name}/>
+                         
                                     </ListItemButton>
                                         </ListItem> ); 
 
@@ -124,7 +133,19 @@ export default function MapPage(){
                             <List style={{maxHeight:600, overflow:'auto'}}>
                                 <ListItem disablePadding>
                                     <ListItemButton>
-                                    <ListItemText primary={item}/>
+                                    <Card sx={{ height: "150px", width: "410px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
+                                    <br/>
+                                    
+                                    <h5 sx={{ bgcolor: blue[100] }}><center>{item}</center></h5>
+                                    <CardActions>
+                                        <br/>
+                                        <br/>
+                                
+                                       <Button size="small" variant="contained" align="center" sx={{ marginLeft: '280px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm">
+  <AlarmIcon />
+</IconButton> RSVP</Button>
+                                    </CardActions>
+                                    </Card>
                                     </ListItemButton>
                                 </ListItem>
                             </List>

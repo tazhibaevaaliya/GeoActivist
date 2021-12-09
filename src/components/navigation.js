@@ -4,35 +4,28 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar'
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown'; 
-import Overlay from 'react-bootstrap/Overlay';
-import {render} from 'react-dom';
+import Image from 'react-bootstrap/Image';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import Card from '@mui/material/Card';
+import Person from './Assets/Person.png'
 import Box from '@mui/material/Box';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { Grid, Paper, Avatar, TextField, Link } from '@material-ui/core'
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import { Router, Route } from 'react-router-dom';
+import { Grid,Paper, Avatar, avatarStyle, TextField, Button ,Link } from '@material-ui/core'
 import PersonIcon from '@mui/icons-material/Person';
 import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
 import GoogleSignOn from './signOnBtn.js';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { useInput } from '@mui/base';
 import { styled } from '@mui/system';
-import CardContent from '@mui/material/CardContent';
-import Chip from '@mui/material/Chip';
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import PropTypes from 'prop-types';
-
-
+import { orange } from '@mui/material/colors';
+import dabbay from './Assets/dabbay.png'
 const ButtonRoot = React.forwardRef(function ButtonRoot(props, ref) {
   const { children, ...other } = props;
 
@@ -204,7 +197,8 @@ function ChildModal() {
  
         <div>
          <React.Fragment>
-      <Button onClick={handleOpen}>NEXT</Button>
+         <center><Button onClick={handleOpen} size="small" variant="contained" align="center" sx={{ marginLeft: '280px', color: orange[200]}}>Next</Button></center>
+         <h2></h2>
 
       <Modal
         hideBackdrop
@@ -214,47 +208,29 @@ function ChildModal() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 800, background: '#FFA500'  }}>
+        <Box sx={{ ...style, width: 800, background: '#ffff'  }}>
           <br/>
 
           
-          <h2 id="parent-modal-title">Pick your type of event!</h2>
-     
+            <Image src={dabbay} style={{display:'block', width:'auto', height:'auto', maxHeight:'170px', marginLeft:'auto', marginRight:'auto', align: 'center'}} />     
            <FormGroup>
-           
-            <SvgButton> <Checkbox defaultChecked />Domestic Violence</SvgButton>
-            <br/>
-            <SvgButton> <Checkbox defaultChecked />Animal Rights</SvgButton>
+           <br/>
+           <Card sx={{ height: '70px', marginLeft: '20px', width: '200px'}}> <Checkbox/>Domestic Violence </Card>
+           <br/>
+           <Card sx={{ height: '70px', marginLeft: '20px', width: '200px'}}> <Checkbox/>Animal rights </Card>
                         <br/>
 
-            <SvgButton> <Checkbox defaultChecked />Black Lives Issues</SvgButton>
+            <Card sx={{ height: '70px', width: '200px', marginLeft: '20px'}}> <Checkbox/>Black lives matter </Card>
                         <br/>
 
-            <SvgButton> <Checkbox defaultChecked /> Environment Issues</SvgButton>
+            <Card sx={{ height: '70px', width: '200px', marginLeft: '20px'}}> <Checkbox/>Environmental Issues </Card>
 
 
 
           </FormGroup>
           <br/>
-
-          <h2 id="parent-modal-title">What are you into?</h2>
-          <br/>
-          
-           <FormGroup>
-              <SvgButton> <Checkbox defaultChecked /> Protests</SvgButton>
-            <br/>
-            <SvgButton> <Checkbox defaultChecked />   Social Media Awarness </SvgButton>
-                        <br/>
-
-            <SvgButton> <Checkbox defaultChecked />  Political Rallies  </SvgButton>
-                        <br/>
-
-            <SvgButton> <Checkbox defaultChecked /> National articles </SvgButton>
-
-       
-
-          </FormGroup>
-         
+ 
+ 
           <ChildModal/>
 
        
@@ -300,44 +276,40 @@ export default function NestedModal() {
         open={open}
         onClose={handleClose}
       >
-        <Box  sx={{ ...style, width: 600, background: '#89CFF0', align: 'center' }}>
-           <Box sx={{ background: '#89CFF0'}}>
+        <Box  sx={{ ...style, width: 600, background: '#fffff', align: 'center' }}>
+           <Box sx={{ background: '#fffff'}}>
  
-                <Box sx={{ background: '#89CFF0', align: 'center' }}>
-                     <h1 align="center"><PersonIcon align="center"/></h1> 
+                <Box sx={{ background: '#fffff', align: 'center' }}>
+                     <h1 align="center"> <Image src={Person} style={{display:'block', width:'auto', height:'auto', maxHeight:'170px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded /></h1> 
                      <h2 align="center">Sign Up</h2>
                 <br/>
-             <h5 align='center'>  Username   
+ 
+ 
+              <center><CustomInput color="orange" aria-label="Demo input" placeholder="Username*" /></center>
               <br/>
-              <CustomInput color="orange" aria-label="Demo input" placeholder="Username*" /></h5>
+              <center><CustomInput align="center" aria-label="Demo input" placeholder="Password*" /> </center>
               <br/>
-              <h5 align='center'>  Password  
-              <br/> 
-              <CustomInput align="center" aria-label="Demo input" placeholder="Password*" /></h5>
-              <br/>
-              <h2 align="center"><Button variant="primary">Sign Up</Button></h2>
               <GoogleSignOn/>
               <br/>
                <Typography>
-                     <Link href="/" >
+               <center><Link href="/" >
                         Forgot password?
-                </Link>
+                </Link></center>
                 </Typography>
-                <Typography > Do you not have an account?
-                     <Link to="/" ><br/>
-                        Sign Up 
-                </Link>
-                </Typography>
+                     <center><Link to="/" >
+                     Do you not have an account? Sign Up
+                </Link></center>
+ 
               <br/>
-              <h2 align='center'><ChildModal/></h2>
-
+ 
                 
  
         
       
                 </Box>
-                
+                <ChildModal/>
         </Box>
+
       </Box>
   
       </Modal>
