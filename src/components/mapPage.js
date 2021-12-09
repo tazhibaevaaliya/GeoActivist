@@ -33,6 +33,8 @@ import AlarmIcon from '@mui/icons-material/Alarm';
 import './mapPage.css';
 // import homePage from './components/homePage';
 
+// import './components/CustomMarker'
+// import CustomMarker from './components/CustomMarker'
 mapboxgl.accessToken = 'pk.eyJ1IjoidHphbGl5YSIsImEiOiJja3VuMncxd3QzeHI3MnZtbmZyOTE0Z2RhIn0.wXgglO-cXtCIq-QJ17Jv-g';
 
 export default function MapPage(){
@@ -85,7 +87,7 @@ export default function MapPage(){
 
     const items = data.map(item =><ListItem disablePadding>
                                     <ListItemButton>
-                                    <ListItemText primary={item.Name} secondary={item.Address}/>
+                                    <ListItemText primary={item.Name} secondary={item.address} />
                                     </ListItemButton>
                                         </ListItem> ); 
 
@@ -138,7 +140,7 @@ export default function MapPage(){
                                         <br/>
                                         <br/>
                                 
-                                       <Button size="small" variant="contained" align="center" sx={{ marginLeft: '290px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm">
+                                       <Button size="small" variant="contained" align="center" sx={{ marginLeft: '280px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm">
   <AlarmIcon />
 </IconButton> RSVP</Button>
                                     </CardActions>
@@ -160,20 +162,13 @@ export default function MapPage(){
             </div>
             </Router>
             </div>
-            <div className="Map" style={{ marginTop: "-100px", marginLeft: "-70px" }}>
+            <div className="Map">
             <Map></Map>
             </div>
-            <div className="row">
-              {filteredCountries.map(country => {
-                return this.renderCountry(country);
-              })}
-            </div>
-          </div>
-        </main>
-        
-      </div>
+        </div>
+        <div>
+        <homePage></homePage>
+        </div>
+    </div>
     );
-  }
 }
-
-export default MapPage;
