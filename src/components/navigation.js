@@ -3,13 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar'
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown'; 
-import Overlay from 'react-bootstrap/Overlay';
-import {render} from 'react-dom';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
@@ -19,16 +13,12 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { Grid, Paper, Avatar, TextField, Link } from '@material-ui/core'
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import PersonIcon from '@mui/icons-material/Person';
 import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
 import GoogleSignOn from './signOnBtn.js';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { useInput } from '@mui/base';
 import { styled } from '@mui/system';
-import CardContent from '@mui/material/CardContent';
-import Chip from '@mui/material/Chip';
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import PropTypes from 'prop-types';
 
