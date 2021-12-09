@@ -33,8 +33,6 @@ import AlarmIcon from '@mui/icons-material/Alarm';
 import './mapPage.css';
 // import homePage from './components/homePage';
 
-// import './components/CustomMarker'
-// import CustomMarker from './components/CustomMarker'
 mapboxgl.accessToken = 'pk.eyJ1IjoidHphbGl5YSIsImEiOiJja3VuMncxd3QzeHI3MnZtbmZyOTE0Z2RhIn0.wXgglO-cXtCIq-QJ17Jv-g';
 
 export default function MapPage(){
@@ -162,13 +160,20 @@ export default function MapPage(){
             </div>
             </Router>
             </div>
-            <div className="Map">
+            <div className="Map" style={{ marginTop: "-100px", marginLeft: "-70px" }}>
             <Map></Map>
             </div>
-        </div>
-        <div>
-        <homePage></homePage>
-        </div>
-    </div>
+            <div className="row">
+              {filteredCountries.map(country => {
+                return this.renderCountry(country);
+              })}
+            </div>
+          </div>
+        </main>
+        
+      </div>
     );
+  }
 }
+
+export default MapPage;
