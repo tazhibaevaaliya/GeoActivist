@@ -25,6 +25,8 @@ import Group2124 from "./Assets/Group2124.png";
 import Group127 from "./Assets/Group127.png";
 import Group128 from "./Assets/Group128.png";
 import Group131 from "./Assets/Group131.png";
+
+import logog from "./Assets/logog.png";
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
