@@ -7,7 +7,7 @@ import {  Link } from "@material-ui/core";
 import type_of_activism_image1 from './Assets/coffee.jpeg'
 import type_of_activism_image2 from './Assets/lights.jpeg'
 import type_of_activism_image3 from './Assets/nature.jpeg'
-import { InputGroup, Button, FormControl, Image, Row, Container, Col } from 'react-bootstrap';
+import { InputGroup, Button, FormControl, Image } from 'react-bootstrap';
 import { MDBCol, MDBIcon } from "mdbreact";
 import logo from './Assets/boston-dec-6.jpeg'
 import intfest from './Assets/intfest.jpeg'
@@ -74,9 +74,7 @@ export default function HomePage(){
                         </form>
                     </MDBCol> */}
                     <Link to="/mapPage">
-                    <MDBCol md="6">
-                         <input className="form-control" type="text" placeholder="Type of Activism | Type of Social Issue | Date" aria-label="Type of " />
-                    </MDBCol>
+                    <h2 sx={{ align:'center' }}><Alert sx={{ marginLeft: '360px', height: '50px', width: '700px'}}> Type of Activism | Type of Social Issue | Date </Alert></h2>
                     </Link>
                     <br/>
                     <br/> 
