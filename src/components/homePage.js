@@ -24,7 +24,7 @@ import Group2124 from "./Assets/Group2124.png";
 import Group127 from "./Assets/Group127.png";
 import Group128 from "./Assets/Group128.png";
 import Group131 from "./Assets/Group131.png";
-
+import { Route } from 'react-router-dom';
 
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
@@ -90,7 +90,7 @@ export default function HomePage(){
                     </h1>
                 </div>
            {/* <Image src={Group119} style={{display:'block', align: 'left', width:'30%', height:'auto', maxHeight:'450px', marginLeft:'left', marginRight:'auto'}} /> */}
-            <div align="left" sx={{marginLeft: "50px"}} className="main_images">
+            <div align="left" sx={{margin: "30px"}} className="main_images">
              <Box sx={{ display: 'flex', width: '1000px', margin: '20px'}}>
 
             <div>   
@@ -98,22 +98,22 @@ export default function HomePage(){
                         
                         <Image src={Group123} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
-                        <center><h4><Link to="/AboutPage">Feminism Rights</Link></h4></center>
+                        <center><h4><Route to="/AboutPage"><Link to="/AboutPage">Women's Rights</Link></Route></h4></center>
                         </div>
                         <div>
                         <Image src={Group122} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
-                        <center><h4><Link to="/AboutPage">Environmental rights</Link></h4></center>
+                        <center><h4><Link to="/AboutPage">Environmentalism</Link></h4></center>
                         </div>
                         <div>
                         <Image src={Group3125} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br />
-                        <center><h4><Link to="/AboutPage">LGBTQ Protests</Link></h4></center>
+                        <center><h4><Link to="/AboutPage">LGBTQ+ Rights</Link></h4></center>
                         </div>
                         <div>
                         <Image src={Group2124} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br />
-                        <center><h4><Link to='/AboutPage'>Healthcare</Link></h4></center>
+                        <center><h4><Link to='/AboutPage'>Public Health </Link></h4></center>
                         </div>
                         </Box>
                     
@@ -137,7 +137,7 @@ export default function HomePage(){
                         <div>
                         <Image src={Group126} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
-                        <center><h4 ><Link to="/AboutPage">Offline</Link></h4></center>
+                        <center><h4 ><Link to="/AboutPage">Online</Link></h4></center>
                         </div>
                         <div>
                         <Image src={Group127} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
@@ -147,12 +147,12 @@ export default function HomePage(){
                         <div>
                         <Image src={Group127} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br/>
-                        <center><h4><Link to="/AboutPage">Letter Writing</Link></h4> </center>
+                        <center><h4><Link to="/AboutPage">Petitions</Link></h4> </center>
                         </div>
                         <div>
                         <Image src={Group128} style={{display:'block', width:'50%', height:'auto', maxHeight:'500px', marginLeft:'auto', marginRight:'auto', align: 'center'}}rounded />
                         <br />
-                        <center><h4><Link to="/AboutPage">Protests</Link></h4></center>
+                        <center><h4><Link to="/AboutPage">Protests </Link></h4></center>
                         
             </div>
             </Box>   
@@ -174,7 +174,7 @@ export default function HomePage(){
                  
                {/* <Card sx={{ display: 'flex' }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}> */}
-                 <Image src={Group131} style={{align: 'left', display:'block', maxHeight:'1960px', maxWidth: '1530px', marginLeft:'-1050px', marginRight:'auto'}}rounded /> 
+                 <Image src={Group131} style={{align: 'center', maxHeight:'1960px', maxWidth: '1630px', marginLeft:'-1050px', marginRight:'75px'}}rounded /> 
                  {/* </Box>
                  </Card> */}
   
