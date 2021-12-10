@@ -11,6 +11,10 @@
     width: 100%;
 }
 
+.css-dfnfb7-MuiPaper-root-MuiCard-root{
+    margin-right: auto;
+    margin-left: auto;
+}
  
 
   body {
@@ -23,14 +27,6 @@
     bottom: 0;
     width: 100%;
     }
-    /* .marker {
-    background-image: url('mapbox-icon.png');
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    } */
     .mapboxgl-popup {
     max-width: 200px;
     }
