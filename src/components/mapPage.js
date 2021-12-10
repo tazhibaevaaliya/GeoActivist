@@ -28,6 +28,9 @@ import { orange } from '@mui/material/colors';
 import { blue } from '@mui/material/colors';
 import IconButton from '@mui/material/IconButton';
 import AlarmIcon from '@mui/icons-material/Alarm';
+import IconButton from '@mui/material/IconButton';
+import PhotoCamera from '@mui/icons-material/PhotoCamera';
+import Stack from '@mui/material/Stack';
 
 
 import './mapPage.css';
@@ -169,7 +172,7 @@ export default function MapPage(){
                                                     <br/>
                                                 <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
                                                 <br/>
-                                                <Button size="small" variant="contained" align="center" sx={{ marginLeft: '300px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
+                                                <Button onClick={() => { alert('Congrats! You have registered for the event'); }}size="small" variant="contained" align="center" sx={{ marginLeft: '300px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
                                                     </Card>
                                             </ListItemButton>
                                         </ListItem>
