@@ -88,10 +88,9 @@ export default function MapPage(){
     const items = data.map(item =><ListItem disablePadding>
                                     <ListItemButton>
                                     <ListItemText primary={item.Name}/>
-                         
                                     </ListItemButton>
                                         </ListItem> ); 
-
+    // const resultSearch = found
     return(
         <div className="App">
 
@@ -113,45 +112,8 @@ export default function MapPage(){
             className="input"
             placeholder="Filter" 
             ></Searchbar> */}
-            <DropDown_typeOfActivism></DropDown_typeOfActivism>
-            <DropDown_issueType></DropDown_issueType>
-            <SliderPage></SliderPage>
-        </div>
 
-        <div className="body">
-            <div className="sideBarContainer">
-            <Router>
-            <div className="sideBar">
-                {/* <ul>{items}</ul> */}
-                {/* <ListGroup as="ol" numbered>
-                    {items}
-                </ListGroup> */}
-
-                {foundEvents && foundEvents.length > 0 ? (
-                    foundEvents.map((item) => (
-                         <Paper style={{ width: '100%', overflow:'auto', bgcolor: 'background.paper' }}>
-                            <List style={{maxHeight:600, overflow:'auto'}}>
-                                <ListItem disablePadding>
-                                    <ListItemButton>
-                                    <Card sx={{ height: "150px", width: "410px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
-                                    <br/>
-                                    
-                                    <h5 sx={{ bgcolor: blue[100] }}><center>{item}</center></h5>
-                                    <CardActions>
-                                        <br/>
-                                        <br/>
-                                
-                                       <Button size="small" variant="contained" align="center" sx={{ marginLeft: '280px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm">
-  <AlarmIcon />
-</IconButton> RSVP</Button>
-                                    </CardActions>
-                                    </Card>
-                                    </ListItemButton>
-                                </ListItem>
-                            </List>
-                        </Paper>
-                            ))):
-                    //     ) : (data.map(item=><Paper style={{ width: '100%', overflow:'auto', bgcolor: 'background.paper' }}>
+{/* //     ) : (data.map(item=><Paper style={{ width: '100%', overflow:'auto', bgcolor: 'background.paper' }}>
                     //     <List style={{maxHeight:600, overflow:'auto'}}>
                     //         <ListItem disablePadding>
                     //             <ListItemButton>
@@ -161,13 +123,55 @@ export default function MapPage(){
                     //     </List>
                     // </Paper>))
 
-                    <Paper>
-                        <List>
-                        {items}
-                        </List>
-                    </Paper>}
+                    // <Paper style={{maxHeight:600, overflow:'auto'}}>
+                    //     <List>
+                    //     {items}
+                    //     </List>
+                    // </Paper>} */}
+            <DropDown_typeOfActivism></DropDown_typeOfActivism>
+            <DropDown_issueType></DropDown_issueType>
+            <SliderPage></SliderPage>
+        </div>
+
+        <div className="body">
+            <div className="sideBarContainer">
+            <Router>
+            
+                {/* <ul>{items}</ul> */}
+                {/* <ListGroup as="ol" numbered>
+                    {items}
+                </ListGroup> */}
+
                 
-            </div>
+                        <Paper style={{maxHeight:600, overflow:'auto' }}>
+                            <List style={{maxHeight:"100%",overflow:'auto'}}>
+                            {foundEvents && foundEvents.length > 0 ? (
+                                        foundEvents.map((item) => (
+                                <ListItem>
+                                    <ListItemButton>
+                                    
+                                     <Card sx={{ height: "150px", width: "410px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
+                                     <br/>
+                                    <h5 sx={{ bgcolor: blue[100] }}><center>{item}</center></h5>
+                                     </Card>
+                                    {/* <ListItemText primary={item}/> */}
+                                    </ListItemButton>
+                                    </ListItem>
+                                    ))): 
+                                    data.map((item)=>(
+                                        <ListItem>
+                                            <ListItemButton>
+                                                {/* <ListItemText primary={item.Name}>
+                                                </ListItemText> */}
+                                                <Card sx={{ height: "150px", width: "410px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
+                                                    <br/>
+                                                <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
+                                                    </Card>
+                                            </ListItemButton>
+                                        </ListItem>
+                                    ))}
+                            </List>
+                        </Paper>
             </Router>
             </div>
             <div className="Map">
