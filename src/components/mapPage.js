@@ -130,7 +130,6 @@ export default function MapPage(){
                     //         </ListItem>
                     //     </List>
                     // </Paper>))
-
                     // <Paper style={{maxHeight:600, overflow:'auto'}}>
                     //     <List>
                     //     {items}
@@ -145,7 +144,7 @@ export default function MapPage(){
             <br/>
             <label htmlFor="contained-button-file">
                 <Input accept="image/*" id="contained-button-file" multiple type="file" />
-                <Button sx={{marginTop: "-10px"}} variant="contained" component="span"> Upload an Event  </Button>
+                <Button variant="contained" component="span"> Upload an Event  </Button>
             </label>
             </Stack>
             {/* <SliderPage></SliderPage> */}
@@ -168,13 +167,12 @@ export default function MapPage(){
                                 <ListItem>
                                     <ListItemButton>
                                     
-                                     <Card sx={{ marginRight:'auto', marginLeft: 'auto', height: "270px", width: "500px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
+                                     <Card sx={{ marginRight:'auto', marginLeft: 'auto', height: "200px", width: "500px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
                                      <br/>
-                                     <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
-                                                <p style={{textAlign: 'center', marginRight:'auto', marginLeft: 'auto' }} >{item.Description}</p>
-                                                <p style={{textAlign: 'center',marginLeft :'auto', marginRight:'auto'}}> Date: {item.Date}</p>
-                                                <p style={{textAlign: 'center',marginLeft :'auto', marginRight :'auto'}}>Time: {item.Time}</p>
-                                    <Button onClick={() => { alert('Congrats! You have registered for the event'); }}size="small" variant="contained" align="center" sx={{ marginLeft: '360px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
+                                    <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
+                                    <p>{item.Description}</p>
+                                    <br/>
+                                    <Button size="small" variant="contained" align="center" sx={{ marginLeft: '300px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
                                      </Card>
                                     {/* <ListItemText primary={item}/> */}
                                     </ListItemButton>
@@ -185,13 +183,12 @@ export default function MapPage(){
                                             <ListItemButton>
                                                 {/* <ListItemText primary={item.Name}>
                                                 </ListItemText> */}
-                                                <Card sx={{ marginRight:'auto', marginLeft: 'auto', height: "270px", width: "500px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
+                                                <Card sx={{ marginRight:'auto', marginLeft: 'auto', height: "200px", width: "500px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
                                                     <br/>
                                                 <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
                                                 <p style={{textAlign: 'center', marginRight:'auto', marginLeft: 'auto' }} >{item.Description}</p>
-                                                <p style={{textAlign: 'center',marginLeft :'auto', marginRight:'auto'}}> Date: {item.Date}</p>
-                                                <p style={{textAlign: 'center',marginLeft :'auto', marginRight :'auto'}}>Time: {item.Time}</p>
-                                                <Button onClick={() => { alert('Congrats! You have registered for the event'); }}size="small" variant="contained" align="center" sx={{ marginLeft: '360px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
+                                                <br/>
+                                                <Button onClick={() => { alert('Congrats! You have registered for the event'); }}size="small" variant="contained" align="center" sx={{ marginLeft: '300px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
                                                     </Card>
                                             </ListItemButton>
                                         </ListItem>
