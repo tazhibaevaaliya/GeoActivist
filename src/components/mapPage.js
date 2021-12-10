@@ -154,6 +154,8 @@ export default function MapPage(){
                                      <br/>
                                     <h5 sx={{ bgcolor: blue[100] }}><center>{item}</center></h5>
                                      </Card>
+                                     <Button size="small" variant="contained" align="center" sx={{ marginLeft: '280px', bgcolor: orange[700]}}>
+                                         <IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
                                     {/* <ListItemText primary={item}/> */}
                                     </ListItemButton>
                                     </ListItem>
@@ -167,6 +169,8 @@ export default function MapPage(){
                                                     <br/>
                                                 <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
                                                     </Card>
+                                                    <Button size="small" variant="contained" align="center" sx={{ marginLeft: 'auto', marginRight='auto', bgcolor: orange[700]}}>
+                                                        <IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
                                             </ListItemButton>
                                         </ListItem>
                                     ))}
