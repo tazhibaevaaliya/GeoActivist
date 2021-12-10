@@ -23,6 +23,7 @@ const Map = () => {
   const [data, setData] = useState([]);
   const [mapMarkers, setMapMarkers] = useState([]);
   const [viewport, setViewPort] = useState({
+    
     position: "absolute",
     width: "100%",
     height: "100%",
@@ -30,6 +31,9 @@ const Map = () => {
     latitude: 42.3486,
     zoom: 15
   })
+
+
+
 
   useEffect(() => {
     async function getMyData() {
@@ -54,7 +58,7 @@ const Map = () => {
     longtitude.push(parseFloat(data[i].Longtitude));
   }
 
-
+  
 
   // loadMapMarkers =()=>{
   //    {data.map(item=>{

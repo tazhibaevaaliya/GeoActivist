@@ -9,6 +9,7 @@ import Example from './Dropdown_checkBox';
 import MySelect from './MySelect.js';
 import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import DropDown_issueType from './Dropdown_checkBox.js';
+import { styled } from '@mui/material/styles';
 import Map from './Map'
 import CustomMarker from './CustomMarker'
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -28,6 +29,8 @@ import { orange } from '@mui/material/colors';
 import { blue } from '@mui/material/colors';
 import IconButton from '@mui/material/IconButton';
 import AlarmIcon from '@mui/icons-material/Alarm';
+import PhotoCamera from '@mui/icons-material/PhotoCamera';
+import Stack from '@mui/material/Stack';
 
 
 import './mapPage.css';
@@ -65,6 +68,10 @@ export default function MapPage(){
     //     setSearch(content);
     // }
 
+    const Input = styled('input')({
+        display: 'none',
+      });
+
     const filter = (e) => {
         const keyword = e.target.value;
         for(const i in data){
@@ -101,7 +108,7 @@ export default function MapPage(){
         <input
         type="search"
         value={name}
-        style={{width:'250px', marginRight:'auto', marginLeft:'auto'}}
+        style={{width:'260px', marginRight:'auto', marginLeft:'auto'}}
         onChange={filter}
         className="input"
         placeholder="Type Name of Social Event"
@@ -129,8 +136,18 @@ export default function MapPage(){
                     //     {items}
                     //     </List>
                     // </Paper>} */}
-            <DropDown_typeOfActivism style={{marginLeft:'auto', marginRight :'auto'}}></DropDown_typeOfActivism>
+            <DropDown_typeOfActivism style={{marginLeft:'auto', marginRight :'20px'}}></DropDown_typeOfActivism>
+            <br/>
+            <br/>
             <DropDown_issueType style={{marginRight:'auto', marginLeft :'auto'}}></DropDown_issueType>
+            <br/>
+            <Stack direction="row" alignItems="center" spacing={4}>
+            <br/>
+            <label htmlFor="contained-button-file">
+                <Input accept="image/*" id="contained-button-file" multiple type="file" />
+                <Button variant="contained" component="span"> Upload an Event  </Button>
+            </label>
+            </Stack>
             {/* <SliderPage></SliderPage> */}
         </div>
 
@@ -172,7 +189,7 @@ export default function MapPage(){
                                                 <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
                                                 <p style={{textAlign: 'center', marginRight:'auto', marginLeft: 'auto' }} >{item.Description}</p>
                                                 <br/>
-                                                <Button size="small" variant="contained" align="center" sx={{ marginLeft: '300px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
+                                                <Button onClick={() => { alert('Congrats! You have registered for the event'); }}size="small" variant="contained" align="center" sx={{ marginLeft: '300px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
                                                     </Card>
                                             </ListItemButton>
                                         </ListItem>
