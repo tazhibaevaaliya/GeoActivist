@@ -27,6 +27,9 @@ import PropTypes from 'prop-types';
 import { orange } from '@mui/material/colors';
 import dabbay from './Assets/dabbay.png'
 import Group131 from "./Assets/Group131.png";
+import IconButton from '@mui/material/IconButton';
+import PhotoCamera from '@mui/icons-material/PhotoCamera';
+import Stack from '@mui/material/Stack';
 
 const ButtonRoot = React.forwardRef(function ButtonRoot(props, ref) {
   const { children, ...other } = props;
@@ -270,9 +273,9 @@ export default function NestedModal() {
                     <Nav.Link href="/map">Map</Nav.Link>
                     <Nav.Link href="/AboutPage">About</Nav.Link>
  
-      <h2 align="right"> <SvgButton onClick={handleOpen} align='right'>Sign in</SvgButton></h2>
+      <h2 > <Button sx={{align:"right"}} onClick={handleOpen} >Sign in</Button></h2>
       <br/>
-      <h2 align="right"> <SvgButton onClick={handleOpen} align='right'>Sign up</SvgButton></h2>
+      <h2 style={{align:"right"}}> <Button sx={{align:"right"}} onClick={handleOpen}>Sign up</Button></h2>
 
       <Modal
         open={open}
