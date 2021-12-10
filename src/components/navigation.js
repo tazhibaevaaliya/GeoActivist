@@ -31,6 +31,11 @@ import IconButton from '@mui/material/IconButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
 import Stack from '@mui/material/Stack';
 import './navigation.css';
+import Login from './Login';
+import Logout from './Logout';
+import LoginHooks from './LoginHooks';
+import LogoutHooks from './LogoutHooks';
+
 
 const ButtonRoot = React.forwardRef(function ButtonRoot(props, ref) {
   const { children, ...other } = props;
@@ -164,6 +169,7 @@ const StyledInputElement = styled('input')`
 
 const CustomInput = React.forwardRef(function CustomInput(props, ref) {
   const { getRootProps, getInputProps } = useInput(props, ref);
+  
 
   return (
     <div {...getRootProps()}>
@@ -171,6 +177,16 @@ const CustomInput = React.forwardRef(function CustomInput(props, ref) {
     </div>
   );
 });
+
+
+const handleSubmit = async e => {
+  e.preventDefault();
+  const token = await loginUser({
+    username,
+    password
+  });
+  setToken(token);
+}
 
 const style = {
   position: 'absolute',
@@ -203,7 +219,7 @@ function ChildModal() {
  
         <div>
          <React.Fragment>
-         <center><Button onClick={handleOpen} size="small" variant="contained" align="center" sx={{ marginLeft: '280px', color: orange[200]}}>Next</Button></center>
+         <center><Button onClick={handleOpen} size="small" variant="contained" align="center" a href='/map' sx={{ marginLeft: '280px', color: orange[200]}} >Next</Button></center>
          <h2></h2>
 
       <Modal
@@ -237,7 +253,7 @@ function ChildModal() {
           <br/>
  
  
-          <ChildModal/>
+          <ChildModal />
 
        
         <br/>
@@ -301,20 +317,21 @@ export default function NestedModal() {
               <br/>
               <center><CustomInput align="center" aria-label="Demo input" placeholder="Password*" /> </center>
               <br/>
-              <GoogleSignOn/>
+              <center><Login /></center>
               <br/>
                <Typography>
-               <center><Link href="/" >
+               <center><Link a href="/AboutPage" >
                         Forgot password?
                 </Link></center>
                 </Typography>
-                     <center><Link to="/" >
+                     <center><Link a href="/AboutPage" >
                      Do you not have an account? Sign Up
                 </Link></center>
  
               <br/>
                 </Box>
               <ChildModal/>
+
         </Box>
 
       </Box>
