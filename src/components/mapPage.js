@@ -188,6 +188,8 @@ export default function MapPage(){
                                                     <br/>
                                                 <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
                                                 <p style={{textAlign: 'center', marginRight:'auto', marginLeft: 'auto' }} >{item.Description}</p>
+                                                <p>{'Date is ${item.Date}'}</p>
+                                                {/* <p>{''}</p> */}
                                                 <br/>
                                                 <Button onClick={() => { alert('Congrats! You have registered for the event'); }}size="small" variant="contained" align="center" sx={{ marginLeft: '300px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
                                                     </Card>
