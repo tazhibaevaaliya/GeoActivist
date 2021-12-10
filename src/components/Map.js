@@ -2,6 +2,8 @@ import React, { useState, useEffect, Image, View } from 'react'
 import MapGL, { GeolocateControl, Marker,Popup, Layer } from 'react-map-gl'
 //import config from '../config'
 import 'mapbox-gl/dist/mapbox-gl.css'
+// eslint-disable-next-line import/no-webpack-loader-syntax
+// mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 import { BrowserRouter as Router } from 'react-router-dom';
 import './sideBar.js'
 import getData from './getData';
