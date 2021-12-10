@@ -13,6 +13,7 @@ import intfest from './Assets/intfest.jpeg'
 import com from './Assets/com.jpg'
 import sju from './Assets/sju.jpeg'
 import kyle from './Assets/kyle.jpeg'
+import { Input } from '@mui/material';
 import stop from './Assets/stop.jpeg'
 import Group119 from "./Assets/Group119.png";
 import Group123 from "./Assets/Group123.png";
@@ -24,17 +25,22 @@ import Group2124 from "./Assets/Group2124.png";
 import Group127 from "./Assets/Group127.png";
 import Group128 from "./Assets/Group128.png";
 import Group131 from "./Assets/Group131.png";
-import { Route } from 'react-router-dom';
-
+import About from './AboutPage'
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
 
 // import InputGroup from 'react-bootstrap/InputGroup';
 // import Button from 'react-bootstrap'
 
 var sectionStyle = {
     backgroundImage: `url(${image})`
+ }
+
+const handleha = {
+
  }
  
 export default function HomePage(){
@@ -72,9 +78,17 @@ export default function HomePage(){
                             <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" />
                         </form>
                     </MDBCol> */}
-                    <Link to="/mapPage">
-                    <h2 sx={{ align:'center' }}><Alert sx={{ marginLeft: '360px', height: '50px', width: '700px'}}> Type of Activism | Type of Social Issue | Date </Alert></h2>
-                    </Link>
+                    <MDBCol md="6">
+                        
+                         <input className="form-control" type="text" placeholder="Search" aria-label="Type of " /> 
+                         
+                             <Router>
+                             <Button  a href="/map">
+                                 -> 
+                            </Button>
+                            </Router> 
+                   
+                    </MDBCol>
                     <br/>
                     <br/> 
                     <br/>
@@ -90,7 +104,7 @@ export default function HomePage(){
                     </h1>
                 </div>
            {/* <Image src={Group119} style={{display:'block', align: 'left', width:'30%', height:'auto', maxHeight:'450px', marginLeft:'left', marginRight:'auto'}} /> */}
-            <div align="left" sx={{margin: "30px"}} className="main_images">
+            <div align="left" sx={{marginLeft: "50px"}} className="main_images">
              <Box sx={{ display: 'flex', width: '1000px', margin: '20px'}}>
 
             <div>   
@@ -174,8 +188,7 @@ export default function HomePage(){
                  
                {/* <Card sx={{ display: 'flex' }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}> */}
-                 <Image src={Group131} style={{align: 'center', maxHeight:'1960px', maxWidth: '1630px', marginLeft:'-1050px', marginRight:'75px'}}rounded /> 
-                 {/* </Box>
+                <Image src={Group131} style={{align: 'center', maxHeight:'1960px', maxWidth: '1630px', marginLeft:'-1050px', marginRight:'75px'}}rounded />                  {/* </Box>
                  </Card> */}
   
             </div>
