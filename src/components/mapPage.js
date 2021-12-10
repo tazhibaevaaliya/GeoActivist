@@ -58,14 +58,11 @@ export default function MapPage(){
         getMyData();
     },[])
 
-    console.log(data[0]);
-    for(const i in data){
-        list.push(data[i].Name);
-    }
-    console.log(list);
+    // console.log(data[0]);
+    // console.log(list);
 
     // const [search, setSearch] = useState("");
-    const [foundEvents, setFoundEvents] = useState(list);
+    const [foundEvents, setFoundEvents] = useState(data);
 
     // const searchClicked = (content) => {
     //     setSearch(content);
@@ -73,15 +70,18 @@ export default function MapPage(){
 
     const filter = (e) => {
         const keyword = e.target.value;
+        for(const i in data){
+            list.push(data[i].Name);
+        }
     
         if (keyword !== '') {
-          const results = list.filter((item) => {
-            return item.toLowerCase().startsWith(keyword.toLowerCase());
+          const results = data.filter((item) => {
+            return item.Name.toLowerCase().startsWith(keyword.toLowerCase());
             // Use the toLowerCase() method to make it case-insensitive
           });
-          setFoundEvents(results);
+          setFoundEvents(results); //returns an object with all the fields
         } else {
-          setFoundEvents(list);
+          setFoundEvents(data);
           // If the text field is empty, show all users
         }
     
@@ -104,9 +104,10 @@ export default function MapPage(){
         <input
         type="search"
         value={name}
+        style={{width:'250px', marginRight:'auto', marginLeft:'auto'}}
         onChange={filter}
         className="input"
-        placeholder="Filter"
+        placeholder="Type Name of Social Event"
         />
             {/* <Searchbar 
             type="search"
@@ -131,9 +132,9 @@ export default function MapPage(){
                     //     {items}
                     //     </List>
                     // </Paper>} */}
-            <DropDown_typeOfActivism></DropDown_typeOfActivism>
-            <DropDown_issueType></DropDown_issueType>
-            <SliderPage></SliderPage>
+            <DropDown_typeOfActivism style={{marginLeft:'auto', marginRight :'auto'}}></DropDown_typeOfActivism>
+            <DropDown_issueType style={{marginRight:'auto', marginLeft :'auto'}}></DropDown_issueType>
+            {/* <SliderPage></SliderPage> */}
         </div>
 
         <div className="body">
@@ -153,9 +154,10 @@ export default function MapPage(){
                                 <ListItem>
                                     <ListItemButton>
                                     
-                                     <Card sx={{ height: "150px", width: "410px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
+                                     <Card sx={{ marginRight:'auto', marginLeft: 'auto', height: "200px", width: "500px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
                                      <br/>
-                                    <h5 sx={{ bgcolor: blue[100] }}><center>{item}</center></h5>
+                                    <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
+                                    <p>{item.Description}</p>
                                     <br/>
                                     <Button size="small" variant="contained" align="center" sx={{ marginLeft: '300px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
                                      </Card>
@@ -168,9 +170,10 @@ export default function MapPage(){
                                             <ListItemButton>
                                                 {/* <ListItemText primary={item.Name}>
                                                 </ListItemText> */}
-                                                <Card sx={{ height: "150px", width: "410px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
+                                                <Card sx={{ marginRight:'auto', marginLeft: 'auto', height: "200px", width: "500px", color: blue[900], bgcolor: blue[100]}} variant="outlined">
                                                     <br/>
                                                 <h5 sx={{ bgcolor: blue[100] }}><center>{item.Name}</center></h5>
+                                                <p style={{textAlign: 'center', marginRight:'auto', marginLeft: 'auto' }} >{item.Description}</p>
                                                 <br/>
                                                 <Button onClick={() => { alert('Congrats! You have registered for the event'); }}size="small" variant="contained" align="center" sx={{ marginLeft: '300px', bgcolor: orange[700]}}><IconButton aria-label="add an alarm"><AlarmIcon /></IconButton> RSVP</Button>
                                                     </Card>
