@@ -262,6 +262,7 @@ export default function NestedModal() {
     
           <Navbar background="#89CFF0" bg="light" variant="light" style={{justifyContent:'space-between'}}>
               <Container>
+                <img style={{width:'30px', height: '40px'}} src={require('./Assets/logo.png').default}></img>
                 <Navbar.Brand href="#home">GeoActivist</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">                   

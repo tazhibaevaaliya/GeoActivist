@@ -9,7 +9,6 @@ import type_of_activism_image2 from './Assets/lights.jpeg'
 import type_of_activism_image3 from './Assets/nature.jpeg'
 import { InputGroup, Button, FormControl, Image, Row, Container, Col } from 'react-bootstrap';
 import { MDBCol, MDBIcon } from "mdbreact";
-import logo from './Assets/boston-dec-6.jpeg'
 import intfest from './Assets/intfest.jpeg'
 import com from './Assets/com.jpg'
 import sju from './Assets/sju.jpeg'
@@ -26,7 +25,7 @@ import Group127 from "./Assets/Group127.png";
 import Group128 from "./Assets/Group128.png";
 import Group131 from "./Assets/Group131.png";
 
-import logog from "./Assets/logog.png";
+
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
