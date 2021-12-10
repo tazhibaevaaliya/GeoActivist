@@ -145,7 +145,7 @@ export default function MapPage(){
             <br/>
             <label htmlFor="contained-button-file">
                 <Input accept="image/*" id="contained-button-file" multiple type="file" />
-                <Button variant="contained" component="span"> Upload an Event  </Button>
+                <Button sx={{marginTop: "-10px"}} variant="contained" component="span"> Upload an Event  </Button>
             </label>
             </Stack>
             {/* <SliderPage></SliderPage> */}
