@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Image, View } from 'react'
-import MapGL, { GeolocateControl, Marker,Popup, Layer } from 'react-map-gl'
+import ReactMapGL, { GeolocateControl, Marker,Popup, Layer } from 'react-map-gl'
 //import config from '../config'
 import 'mapbox-gl/dist/mapbox-gl.css'
 // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -131,7 +131,7 @@ const Map = () => {
   return (
 
     <div style={{ margin: '0 0' }, { position: "absolute" }, { height: "100%" }}>
-      <MapGL
+      <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={TOKEN}
         mapStyle="mapbox://styles/mapbox/streets-v11"
@@ -190,7 +190,7 @@ const Map = () => {
         </Marker> */}
 
 
-      </MapGL>
+      </ReactMapGL>
     </div>
   )
 }

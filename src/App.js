@@ -24,7 +24,7 @@ import './App.css';
 // import './components/MySelect.js'
 // import MySelect from './components/MySelect.js';
 
-// import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+// import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no--loader-syntax
 // import DropDown_issueType from './components/Dropdown_checkBox.js';
 
 // import './components/Map.js'
