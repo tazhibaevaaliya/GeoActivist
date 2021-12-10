@@ -9,3 +9,7 @@ svg {
   vertical-align: middle;
   align: right,
 }
+
+.MuiButton-label{
+  margin-bottom: 5px;
+}

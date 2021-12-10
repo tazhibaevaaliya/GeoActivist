@@ -30,6 +30,7 @@ import Group131 from "./Assets/Group131.png";
 import IconButton from '@mui/material/IconButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
 import Stack from '@mui/material/Stack';
+import './navigation.css';
 
 const ButtonRoot = React.forwardRef(function ButtonRoot(props, ref) {
   const { children, ...other } = props;
@@ -264,24 +265,29 @@ export default function NestedModal() {
     <div>
     
           <Navbar background="#89CFF0" bg="light" variant="light" style={{justifyContent:'space-between'}}>
-              <Container>
+              <Container style={{position:'relative'}}>
                 <img style={{width:'30px', height: '40px'}} src={require('./Assets/logo.png').default}></img>
                 <Navbar.Brand href="#home">GeoActivist</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">                   
                   <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
+                    {/* <Nav.Link href="/">Home</Nav.Link> */}
                     <Nav.Link href="/map">Map</Nav.Link>
                     <Nav.Link href="/AboutPage">About</Nav.Link>
+                  
  
-      <h2 > <Button sx={{align:"right"}} onClick={handleOpen} >Sign in</Button></h2>
+      <h2 style={{position: 'absolute', width: '130.21px', height: '34.44px', right: '150px', background: '#FF9466', borderRadius: '35px', textAlign:'center', alignContent:'space-around', marginBottom:'5px'}} > 
+      <Button sx={{align:"right", marginLeft:'auto', marginRight:'auto', marginBottom:'5px'}} 
+      onClick={handleOpen} >Sign in</Button></h2>
       <br/>
-      <h2 style={{align:"right"}}> <Button sx={{align:"right"}} onClick={handleOpen}>Sign up</Button></h2>
+
+      <h2 style={{position: 'absolute', width: '130.21px', height: '34.44px', right: '0px', background: '#FF9466', borderRadius: '35px', textAlign:'center', alignContent:'space-around', marginBottom:'5px'}}> 
+      <Button sx={{align:"right", marginLeft:'auto', marginRight:'auto', marginBottom:'5px'}} 
+    onClick={handleOpen}>Sign up</Button></h2>
 
       <Modal
         open={open}
-        onClose={handleClose}
-      >
+        onClose={handleClose}>
         <Box  sx={{ ...style, width: 600, background: '#fffff', align: 'center' }}>
            <Box sx={{ background: '#fffff'}}>
  
@@ -307,13 +313,8 @@ export default function NestedModal() {
                 </Link></center>
  
               <br/>
- 
-                
- 
-        
-      
                 </Box>
-                <ChildModal/>
+              <ChildModal/>
         </Box>
 
       </Box>
