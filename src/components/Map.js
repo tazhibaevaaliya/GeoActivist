@@ -6,7 +6,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 // mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 import { BrowserRouter as Router } from 'react-router-dom';
 import './sideBar.js'
-import getData from './getData';
+// import getData from './getData';
 import Sidebar from './sideBar'
 import { WindowRounded } from '@mui/icons-material';
 const TOKEN = 'pk.eyJ1IjoidHphbGl5YSIsImEiOiJja3VuMncxd3QzeHI3MnZtbmZyOTE0Z2RhIn0.wXgglO-cXtCIq-QJ17Jv-g';
@@ -66,24 +66,24 @@ const Map = () => {
 
 
 
-  useEffect(() => {
-    async function getMyData() {
-      const myData = await getData();
-      // setMapMarkers(myData.map(item => (
-      //   <Marker latitude={Number(item.Latitude)} longitude={Number(item.Longtitude)} offsetLeft={-20} offsetTop={-10}>
-      //     <button style={{background:'none', border:'none',cursor:'pointer'}} onClick={(e)=>{
-      //       e.preventDefault();
-      //       setSelectedEvent(mapMarkers); 
-      //     }}>
-      //       <img style={{width:'20px',height:'50px'}} src={require('./Assets/mapbox-marker-icon.png').default} /> 
-      //       </button>
-      //    </Marker>)
-      //   ))
-        // console.log(mapMarkers.length)
-      setData(myData);
-    }
-    getMyData();
-  }, [])
+  // useEffect(() => {
+  //   async function getMyData() {
+  //     const myData = await getData();
+  //     // setMapMarkers(myData.map(item => (
+  //     //   <Marker latitude={Number(item.Latitude)} longitude={Number(item.Longtitude)} offsetLeft={-20} offsetTop={-10}>
+  //     //     <button style={{background:'none', border:'none',cursor:'pointer'}} onClick={(e)=>{
+  //     //       e.preventDefault();
+  //     //       setSelectedEvent(mapMarkers); 
+  //     //     }}>
+  //     //       <img style={{width:'20px',height:'50px'}} src={require('./Assets/mapbox-marker-icon.png').default} /> 
+  //     //       </button>
+  //     //    </Marker>)
+  //     //   ))
+  //       // console.log(mapMarkers.length)
+  //     setData(myData);
+  //   }
+  //   getMyData();
+  // }, [])
 
   for (const i in data) {
     latitude.push(parseFloat(data[i].Latitude));
