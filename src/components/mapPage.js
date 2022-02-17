@@ -1,35 +1,29 @@
-import Searchbar from './Searchbar';
+
 import Navbar from './navigation';
 import React, {Component, useState,useRef,useEffect} from 'react';
 import "bootstrap/dist/css/bootstrap.css";
-import SliderPage from './Slider'
 import DropDown_typeOfActivism from './Dropdown_typeOfActivism';
-import ReactMapGL, { Marker,Layer, Feature } from 'react-map-gl'
-import Example from './Dropdown_checkBox';
-import MySelect from './MySelect.js';
+
+
+
 import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import DropDown_issueType from './Dropdown_checkBox.js';
 import { styled } from '@mui/material/styles';
 import Map from './Map'
-import CustomMarker from './CustomMarker'
 import { BrowserRouter as Router } from 'react-router-dom';
-import Sidebar from './sideBar'
-import VirtualizedList from './VirtualizedList';
-import getData from './getData';
-import { FixedSizeList } from 'react-window';
+
+// import getData from './getData';
 import Paper from '@mui/material/Box';
 import List from '@mui/material/List';
 import Card from '@mui/material/Card';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import ListGroup from 'react-bootstrap/ListGroup';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { orange } from '@mui/material/colors';
 import { blue } from '@mui/material/colors';
 import IconButton from '@mui/material/IconButton';
 import AlarmIcon from '@mui/icons-material/Alarm';
-import PhotoCamera from '@mui/icons-material/PhotoCamera';
 import Stack from '@mui/material/Stack';
 
 
@@ -50,13 +44,13 @@ export default function MapPage(){
     const list = [];
     const [name, setName] = useState('');
 
-    useEffect(()=>{
-        async function getMyData(){
-            const myData = await getData();
-            setData(myData);
-        }
-        getMyData();
-    },[])
+    // useEffect(()=>{
+    //     async function getMyData(){
+    //         const myData = await getData();
+    //         setData(myData);
+    //     }
+    //     getMyData();
+    // },[])
 
     // console.log(data[0]);
     // console.log(list);
