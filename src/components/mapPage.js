@@ -15,7 +15,7 @@ import CustomMarker from './CustomMarker'
 import { BrowserRouter as Router } from 'react-router-dom';
 import Sidebar from './sideBar'
 import VirtualizedList from './VirtualizedList';
-import getData from './getData';
+// import getData from './getData';
 import { FixedSizeList } from 'react-window';
 import Paper from '@mui/material/Box';
 import List from '@mui/material/List';
@@ -50,13 +50,13 @@ export default function MapPage(){
     const list = [];
     const [name, setName] = useState('');
 
-    useEffect(()=>{
-        async function getMyData(){
-            const myData = await getData();
-            setData(myData);
-        }
-        getMyData();
-    },[])
+    // useEffect(()=>{
+    //     async function getMyData(){
+    //         const myData = await getData();
+    //         setData(myData);
+    //     }
+    //     getMyData();
+    // },[])
 
     // console.log(data[0]);
     // console.log(list);
