@@ -85,7 +85,6 @@ export default function HomePage(){
                          
                              <Router>
                              <Button  a href="/map">
-                                 -> 
                             </Button>
                             </Router> 
                    
