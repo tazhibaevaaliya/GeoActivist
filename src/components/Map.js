@@ -42,25 +42,6 @@ const Map = () => {
     latitude: 42.3486,
     zoom: 15
   });
-
-  // const CustomPopup = ({marker}) => {
-  //   return (
-  //     marker && <Popup
-  //       latitude={marker.Latitude}
-  //       longitude={marker.Longtitude}
-  //       // onClose={closePopup}
-  //       closeButton={true}
-  //       closeOnClick={false}
-  //       offsetTop={-30}
-  //      >
-  //       <p>{marker.name}</p>
-  //     </Popup>
-  //   )};
-
-    // const closePopup=()=>{
-    //   togglePopup(false);
-    // }
-
     
   
 
@@ -180,15 +161,6 @@ const Map = () => {
             <p style={{fontSize:'12px'}}>{selectedEvent.Description}</p>
           </Popup>)
            :null}
-        {/* {console.log(markers)} */}
-        {/* {mapMarkers} */}
-        {/* {console.log(mapMarkers)} */}
-
-        {/* 
-        <Marker latitude={42.3486} longitude={-71.1029} offsetLeft={-20} offsetTop={-10}>
-          <img src={require('./Assets/mapbox-marker-icon.png').default} />
-        </Marker> */}
-
 
       </ReactMapGL>
     </div>

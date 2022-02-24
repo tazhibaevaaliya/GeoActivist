@@ -15,6 +15,12 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+.map{
+    position:relative;
+    width:60%;
+    height:100%;
+}
  
 
   body {

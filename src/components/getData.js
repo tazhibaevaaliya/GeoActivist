@@ -23,14 +23,14 @@ export default async function getData(){
     var newData = [];
     var myArray = [];
     var dbEvents = child(dbRef,"events");
-    var snapshot = await get(dbRef);
+    // var snapshot = await get(dbRef);
     // console.log(snapshot);
-    snapshot.forEach(function(childSnapshot) {
-              var item = childSnapshot.val();
-              item.key = childSnapshot.key;
-              returnArr.push(item);
-            //   console.log(returnArr);
-              });
+    // snapshot.forEach(function(childSnapshot) {
+    //           var item = childSnapshot.val();
+    //           item.key = childSnapshot.key;
+    //           returnArr.push(item);
+    //         //   console.log(returnArr);
+    //           });
     var arrayLength = returnArr.length;
     for (var i = 0; i < arrayLength; i++) {
             myArray[i] = returnArr[i];
