@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="stylesheet" href="https://use.typekit.net/okt2dit.css">
-    <link rel="stylesheet" href="https://use.typekit.net/okt2dit.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container,
+      .profile-section,
+      .login-section {
+        margin-top: 2rem;
+      }
+      .container {
+        padding-left: 5rem;
+      }
+      .profile-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #profile-picture {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+      }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div class="container">
+      <div class="">
+        <h1>Firebase Auth</h1>
+      </div>
+      <div class="profile-section">
+        <img
+          id="profile-picture"
+          src="./images/profile-image-placeholder.jpg"
+        />
+        <div id="profile-email"></div>
+        <div id="profile-name"></div>
+      </div>
+      <div class="login-section">
+        <button id="login-button" style="display: none;">
+          Login with Google
+        </button>
+        <button id="logout-button" style="display: none;">Logout</button>
+      </div>
+    </div>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

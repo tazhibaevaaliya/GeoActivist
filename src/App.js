@@ -64,7 +64,6 @@ function App() {
   // const [lat, setLat] = useState(42.3486);
   // const [zoom, setZoom] = useState(15.48);
 
-
   return (
     // <div className="App">
 
